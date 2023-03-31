@@ -27,7 +27,13 @@ public class clienteService implements IClienteService{
 
     @Override
     public int save(Cliente c) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        int res=0;
+        Cliente cliente=data.save(c);
+        if (!cliente.equals(null)) {
+            res=1;
+        }
+        return res;
     }
 
     @Override
