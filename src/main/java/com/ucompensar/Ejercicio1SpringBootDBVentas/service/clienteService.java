@@ -22,7 +22,7 @@ public class clienteService implements IClienteService{
 
     @Override
     public Optional<Cliente> listarId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return data.findById(id);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class clienteService implements IClienteService{
 
     @Override
     public void delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        data.deleteById(id);
     }
     
 }
